@@ -1,0 +1,21 @@
+<h1>Listing rubies</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rubies.each do |ruby| %>
+  <tr>
+    <td><%= link_to 'Show', ruby %></td>
+    <td><%= link_to 'Edit', edit_ruby_path(ruby) %></td>
+    <td><%= link_to 'Destroy', ruby, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ruby', new_ruby_path %>
